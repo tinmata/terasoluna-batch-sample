@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.job02.PersonRepository">
+  <insert id="insertPerson" parameterType="org.example.job02.Person">
+    <![CDATA[
+      INSERT INTO
+        people(first_name, last_name)
+      VALUES (
+        #{firstName}, #{lastName}
+      )
+    ]]>
+  </insert>
+</mapper>
+
